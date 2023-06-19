@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 
-bankdata = pd.read_csv('dataset-nasabah.csv')
+bankdata = pd.read_csv('dataset-pinjaman-nasabah.xlsx')
 
 print(bankdata)
 

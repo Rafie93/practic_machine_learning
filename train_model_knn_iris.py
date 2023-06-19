@@ -7,10 +7,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 
-bankdata = pd.read_excel('dataset-iris.xls')
+bankdata = pd.read_excel('dataset-iris.xlsx')
 print(bankdata)
 
-X = bankdata.drop(['No','class'], axis=1)
+X = bankdata.drop(['no','class'], axis=1)
 Y = bankdata['class']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, train_size=0.75)
@@ -31,6 +31,6 @@ disp.plot()
 plt.show()
 
 # Save model
-with open('model-knn.pickle', 'wb') as f:
+with open('model.pickle', 'wb') as f:
     pickle.dump(clf, f)
 

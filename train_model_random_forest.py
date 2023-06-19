@@ -9,10 +9,10 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 
-bankdata = pd.read_excel('dataset-iris.xls')
+bankdata = pd.read_excel('dataset-iris.xlsx')
 print(bankdata)
 
-X = bankdata.drop(['No', 'class'], axis=1)
+X = bankdata.drop(['no', 'class'], axis=1)
 Y = bankdata['class']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y)
